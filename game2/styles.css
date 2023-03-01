@@ -1,0 +1,157 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+body {
+  background-image: url(./images/BG_01.png);
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 8%;
+}
+
+#card {
+  /* important:
+     100% of width & 100% of height
+     ensure transform-origin will occur in the center of container
+  */
+  width: 80%;
+  height: 0;
+  transform-style: preserve-3d;
+  position: absolute;
+  transition: transform 1s;
+}
+
+#card figure {
+  display: block;
+  position: absolute; /* reset figure position*/
+  width: 100%;
+  backface-visibility: hidden; /* hide the back-side of the faces when they are faced away from the viewer */
+  margin: 0;
+  padding: 0;
+}
+
+#card .front {
+  font-size: 8em;
+}
+#card .back {
+  transform: rotateY(180deg);
+  font-size: 3em;
+  margin-top: 5rem;
+  height: 10%;
+  white-space: nowrap;
+}
+
+.caption {
+  text-align: center;
+  color: yellow;
+  text-shadow: 4px 4px black;
+  white-space: nowrap;
+}
+#card:hover {
+  transform: rotateY(180deg);
+}
+#input {
+  background-color: rgba(0, 0, 0, 0) !important;
+  outline: none;
+  width: 200px;
+  border-width: 0 0 2px;
+  position: absolute;
+  margin-top: 18rem;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  display: block;
+}
+
+#music {
+  width: 15px;
+}
+#start-over {
+  margin-top: 15rem;
+  /* margin-left: 25%; */
+  padding: 10px 15px;
+  background-color: black;
+  color: #fff;
+  display: none;
+  border: 1px solid #000;
+  cursor: pointer;
+  z-index: 20;
+  position: absolute;
+}
+
+#start-over:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+#submit-button {
+  margin-top: 20.5rem;
+  /* margin-left: 25%; */
+  padding: 10px 15px;
+  background-color: black;
+  color: #fff;
+  display: block;
+  border: 1px solid #000;
+  cursor: pointer;
+  z-index: 20;
+  position: absolute;
+}
+
+#submit-button:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+  #card .front {
+    font-size: 6em;
+    margin-top: 1rem;
+  }
+  #card .back {
+    font-size: 2em;
+    margin-top: 4rem;
+  }
+  #input {
+    width: 150px;
+    font-size: 18px;
+    margin-top: 15rem;
+  }
+  #start-over {
+    margin-top: 20rem;
+  }
+  #submit-button {
+    margin-top: 17.5rem;
+  }
+}
+
+@media only screen and (max-height: 580px) {
+  #card .front {
+    font-size: 3em;
+    margin-top: 0.5rem;
+  }
+  #card .back {
+    margin-top: 0;
+  }
+  #input {
+    margin-top: 9rem;
+  }
+  #start-over {
+    margin-top: 14rem;
+  }
+  #submit-button {
+    margin-top: 11.5rem;
+  }
+}

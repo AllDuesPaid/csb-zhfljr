@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  /* This makes it so element width doesn't change when adding padding/borders */
+  box-sizing: border-box;
+}
+body {
+  background-color: purple;
+  font-family: "Roboto", sans-serif;
+  color: gold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
