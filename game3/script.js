@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", function() {
+
+
 const body = document.querySelector("body");
 const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
@@ -85,3 +88,4 @@ function clearEverything() {
   }
   body.classList.remove("wrong", "correct");
 }
+});
